@@ -3,3 +3,10 @@
 *.db
 *.suo
 *.filters
+*.log
+*.pdb
+*.exe
+*.obj
+*.tlog
+*.ilk
+*.idb
