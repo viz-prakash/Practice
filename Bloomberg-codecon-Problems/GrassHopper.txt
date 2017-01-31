@@ -1,0 +1,70 @@
+Grasshopper
+Memory Limit: 1024MB Runtime Limit: 5s Score: 500
+Master Shifu is conducting a game between his pupils Rabbit and Grasshopper. Shifu has setup N lanes of blocks running north to south with K blocks in each lane. The blocks have varying heights and each block has a gold coin on it.
+
+The game spans D days. The game is turn based. Rabbit makes the first move on the first day. Grasshopper makes the first move on the second day, and they continue to alternate for the rest of the days.
+
+When it is Rabbit or Grasshopper's turn, they will pick a lane of blocks that has not yet been traversed. They will then traverse this lane by hopping from block to block. When they are traversing a lane, they can only hop to a block that has a larger height than the one they are on. They can hop to any block as their first hop onto the lane. They will pick up the coin on each block they land on.
+
+On a given day, the game is played until all lanes have been traversed. The game is over at the end of day D. The winner is the one with the largest number of coins.
+
+Shifu has decided to make the game a little harder. At the end of each day, Shifu will shuffle the lanes in the following manner: the first elements in each of the lanes will be shifted to the left, the second elements in each of the lanes will be shifted to the right, and so on.
+
+If Rabbit plays optimally, can Grasshopper win and what is the largest number of coins that Grasshopper can get?
+
+
+
+Input Specifications
+
+The first line will be D, the number of days the game will be played for, with 1 ? D < 10
+
+The second line will contain N, the number of lanes, with 1 ? N < 10
+
+The third line will contain K, the number of blocks in each lane, with 1 ? K < 10
+
+The next N lines will contain K integers in each line, which represent the height of the blocks. The first of which is the left most lane and the last is the right most lane. Each height will be greater than 0 and less than 50.
+
+
+Output Specifications
+
+One line with two integers. The first is 1 if Grasshopper can guarantee a victory and 0 otherwise. The second integer is the largest number of coins that Grasshopper can get.
+
+
+Sample Input/Output
+
+INPUT
+2
+4
+4
+14 4 12 6
+1 8 3 10
+3 13 5 11
+7 2 9 4
+OUTPUT
+1 13
+EXPLANATION
+On the first day, the first through fourth lanes are:
+1: 14 4 12 6
+2: 1 8 3 10
+3: 3 13 5 11
+4: 7 2 9 4
+The largest number of hops for the first lane is 2 (the second block to the fourth).
+For lane 2, it is 3 (first, third, then fourth block).
+For lane 3 it is 3 (first, third, then fourth).
+For lane 4 is it 2 (first, then third).
+Rabbit will go first, picking lane 2 or 3 since he can get the largest number of
+coins (3) from one them. Grasshopper will go second and traverse the other lane
+with 3 coins. Rabbit will choose either the first or fourth lane since they both
+have 2 coins and Grasshopper will have choose the other. At the end of day one,
+they have 5 coins each.
+On day two, the lanes are as follows:
+1: 1 2 3 4
+2: 3 4 5 6
+3: 7 8 9 10
+4: 14 13 12 11
+The largest hops for these are 4, 4, 4, 1. Grasshopper will go first and pick
+a lane with 4, Rabbit will pick a lane with 4, Grasshopper will pick the remaining lane
+with 4, and Grasshopper will pick the lane with 1. Their day two totals will be
+8 for Grasshopper and 5 for Rabbit.
+The game was for 2 days and total coins are 10 for Rabbit and 13 for Grasshopper.
+Thus Grasshopper can guarantee a victory and can gain a max of 13 coins.

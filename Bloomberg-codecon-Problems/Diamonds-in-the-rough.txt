@@ -1,0 +1,31 @@
+Diamonds in the Rough
+Memory Limit: 1024MB Runtime Limit: 5s Score: 300
+A rectangular field has diamonds buried in it uniformly in both directions; the diamonds are all buried at integral coordinates (ex. (1,1), (2,3)). You can assume that the field is the positive XY quadrant (where both x,y are positive) and it's infinitely large. Now, imagine that you were to dig a triangle-shaped hole to retrieve some diamonds. Given the vertices of the triangle, determine how many diamonds you'd find in that triangle. The vertices of the triangle can have any real positive coordinates.
+
+
+Assumptions:
+
+The diamonds are all point-sized.
+Any diamond lying on the border of the triangle is considered to be part of the triangle
+The vertices of the triangle form a valid triangle lying in the positive quadrant
+ 
+
+
+Input Specifications
+
+The command line arguments shall consist of 6 real numbers, which represent the coordinates of the triangle in the format - x1 y1 x2 y2 x3 y3
+
+
+Output Specifications
+
+Your output will be the number of diamonds lying in the triangle.
+
+
+Sample Input/Output
+
+INPUT
+1.0 1.0 2.0 1.0 1.5 2.0
+OUTPUT
+2
+EXPLANATION
+The diamonds lie on the coordinates (1.0,1.0) and (2.0,1.0).
